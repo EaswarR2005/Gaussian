@@ -1,24 +1,19 @@
 # Gaussian Elimination
-
 ## AIM:
 To write a program to find the solution of a matrix using Gaussian Elimination.
-
 ## Equipments Required:
 1. Hardware – PCs
 2. Anaconda – Python 3.7 Installation / Moodle-Code Runner
-
 ## Algorithm
 1. Start the program
 2. Write the code appropriately
 3. Check the code
 4. Run the program.
-
 ## Program:
 ```
 Program to solve a matrix using Gaussian elimination without partial pivoting.
 Developed by: EASWAR R
 RegisterNumber: 212223230053
-
 import numpy as np
 n=int(input())
 matrix=np.zeros((n,n+1))
@@ -40,8 +35,6 @@ for i in range(n-2,-1,-1):
 for i in range(n):
     print("X%d = %0.2f" %(i,x[i]),end=" ")
 ```
-
-
 ## Output:
 ![image](https://github.com/EaswarR2005/Gaussian/assets/146931525/3c8671b4-f763-45fb-847b-8736c01dbe21)
 ![image](https://github.com/EaswarR2005/Gaussian/assets/146931525/73f2edec-d2cc-4656-8a5f-b0e19c4840b2)
