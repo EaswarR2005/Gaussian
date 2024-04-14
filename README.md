@@ -40,6 +40,8 @@ for i in range(n-2,-1,-1):
 for i in range(n):
     print("X%d = %0.2f" %(i,x[i]),end=" ")
 ```
+
+
 ## Output:
 ![image](https://github.com/EaswarR2005/Gaussian/assets/146931525/3c8671b4-f763-45fb-847b-8736c01dbe21)
 ![image](https://github.com/EaswarR2005/Gaussian/assets/146931525/73f2edec-d2cc-4656-8a5f-b0e19c4840b2)
