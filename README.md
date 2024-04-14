@@ -8,23 +8,41 @@ To write a program to find the solution of a matrix using Gaussian Elimination.
 2. Anaconda – Python 3.7 Installation / Moodle-Code Runner
 
 ## Algorithm
-1. 
-2. 
-3. 
-4. 
+1. Start the program
+2. Write the code appropriately
+3. Check the code
+4. Run the program.
 
 ## Program:
 ```
-/*
-Program to find the solution of a matrix using Gaussian Elimination.
-Developed by: 
-RegisterNumber: 
-*/
+Program to solve a matrix using Gaussian elimination without partial pivoting.
+Developed by: EASWAR R
+RegisterNumber: 212223230053
+
+import numpy as np
+n=int(input())
+matrix=np.zeros((n,n+1))
+x=np.zeros(n)
+for i in range(n):
+    for j in range(n+1):
+        matrix[i][j]=int(input())
+for i in range(n):
+    for j in range(i+1,n):
+        ratio=matrix[j][i]/matrix[i][i]
+        for k in range(n+1):
+            matrix[j][k]=matrix[j][k]-ratio*matrix[i][k]
+x[n-1]=matrix[n-1][n]/matrix[n-1][n-1]
+for i in range(n-2,-1,-1):
+    x[i]=matrix[i][n]
+    for j in range(i+1,n):
+        x[i]=x[i]-matrix[i][j]*x[j]
+    x[i]=x[i]/matrix[i][i]
+for i in range(n):
+    print("X%d = %0.2f" %(i,x[i]),end=" ")
 ```
-
 ## Output:
-![gaussian elimination]()
-
+![image](https://github.com/EaswarR2005/Gaussian/assets/146931525/3c8671b4-f763-45fb-847b-8736c01dbe21)
+![image](https://github.com/EaswarR2005/Gaussian/assets/146931525/73f2edec-d2cc-4656-8a5f-b0e19c4840b2)
 
 ## Result:
 Thus the program to find the solution of a matrix using Gaussian Elimination is written and verified using python programming.
